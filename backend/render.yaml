@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: bharatdarshan-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: GNEWS_API_KEY
+        sync: false          # You will set this in Render dashboard (secret)
+      - key: JWT_SECRET
+        generateValue: true  # Render auto-generates a secure random value
+      - key: ALLOWED_ORIGIN
+        sync: false          # You will set this to your Vercel frontend URL

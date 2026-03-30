@@ -1,0 +1,47 @@
+# BharatDarshan — Root .gitignore
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment files (NEVER commit secrets!)
+.env
+.env.local
+.env.production
+**/.env
+**/.env.local
+
+# SQLite database files (backend)
+*.db
+*.db-shm
+*.db-wal
+
+# Build outputs
+dist/
+build/
+.vite/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Vercel
+.vercel/
+
+# Coverage
+coverage/
+.nyc_output/
