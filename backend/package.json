@@ -1,14 +1,17 @@
 {
-  "name": "backend",
+  "name": "bharatdarshan-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "BharatDarshan Backend API",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "keywords": [],
-  "author": "",
+  "author": "Sreyosh Majumder",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^3.0.3",
