@@ -1,7 +1,13 @@
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
+const os = require('os');
 
-const DB_PATH = path.join(__dirname, 'bharatdarshan.db');
+// Vercel serverless: only /tmp is writable at runtime.
+// Local dev: use the backend directory.
+const DB_PATH = process.env.NODE_ENV === 'production'
+  ? path.join(os.tmpdir(), 'bharatdarshan.db')
+  : path.join(__dirname, 'bharatdarshan.db');
+
 let db;
 
 function getDb() {
